@@ -228,7 +228,124 @@ h1 {
  display: none;
  cursor: pointer;
 }
+/*Carousell*/
+.gallery-container{
+  position: relative;
+}
+.gallery{
+  display: flex;
+  padding: 4rem 0 4rem 6rem;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,.1);
+  min-height: 100vh;
+}
+.gallery .slider{
+  flex: 1 ;
+  display: flex;
+  flex-direction: row;
+  max-width: 50%;
+  position: relative;
 
+}
+.gallery .slider .images{
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+}
+.gallery .content{
+    gap: 2rem;
+}
+.gallery .content h2{
+  font-size: .9rem;
+  font-weight: 400;
+  color: #aaa
+}
+.gallery .content h1{
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #fff;
+}
+.gallery .content p{
+  font-size: 1.1rem;
+  color: #eee;
+}
+.gallery .slider .images::-webkit-scrollbar{
+  display: none;
+}
+.gallery .slider .images .images-card{
+  position: relative;
+  min-width: 301px;
+  height: 447px;
+  margin-right: 2rem;
+}
+.gallery .slider .images .images-card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+.gallery .slider .arrows{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 5%;
+}
+.gallery .slider .arrows .arrow-icon{
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #000;
+}
+@media (min-width:2000px){
+   .gallery .content{
+      max-width: 1000px;
+      padding-right:4rem;
+  }
+  
+.gallery .slider .images .images-card{
+  min-width: 400px;
+  height: 550px;
+}
+}
+@media (max-width:1150px){
+   .gallery{
+      flex-direction: column;
+      width: 100%;
+  }
+   .gallery .slider{
+      max-width: 100%;
+      width: 100%;
+      margin: 5rem 0;
+  }
+}
+@media (max-width:850px){
+   .gallery{
+      padding: 4rem 0 4rem 4rem;
+
+  }
+}
+
+@media (max-width:650px){
+   .gallery{
+      padding: 4rem 0 4rem 2rem;
+  }
+   .gallery .slider .images .images-card{
+      min-width: 240px;
+      height: 320px;
+  }
+}
 /*Post component*/
 .post {
   display: flex;
